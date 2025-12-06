@@ -19,16 +19,3 @@ cd <nombre-del-proyecto>
 # Seguir las instrucciones del README del proyecto
 ```
 
-## Requisitos Generales
-
-- Java 17 o superior
-- Maven o Gradle (según el proyecto)
-- Spring Boot 3.x
-
-## Contribuir
-
-[Añade aquí las instrucciones para contribuir si es necesario]
-
-## Licencia
-
-[Especifica la licencia si es aplicable]
