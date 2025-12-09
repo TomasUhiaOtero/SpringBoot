@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tomas.spring.app1.springboot_applications.models.Empleados;
+import com.tomas.spring.app1.springboot_applications.models.dto.ClaseDTO;
 
 
 
@@ -34,15 +35,14 @@ public class EjemploRestController {
 * Quieres un endpoint genérico que responda a varios verbos HTTP.*/
     
     
-    public Map<String, Object> detalles_info2() {
+    public ClaseDTO detalles_info2() {
+        // DTO - Data Transfer Object - Sirve para transferir datos 
+        ClaseDTO usuario1 = new ClaseDTO();
+        usuario1.setTitulo("Administrador");
+        usuario1.setUsuario("Juan Perez");
 
-        Empleados empleado1 = new Empleados("Juan", "Perez", "123 Main St", "Developer", 30, 1234567890, 1);
-
-
-        Map<String, Object> response = new HashMap<>();
-        response.put("Empleado", "Datos del empleado");
-        response.put("Informacion", empleado1);
         
-        return response;
+
+        return usuario1;
     }
 }
