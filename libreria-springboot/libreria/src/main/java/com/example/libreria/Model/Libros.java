@@ -57,6 +57,11 @@ public class Libros implements Cloneable{
                 + fechaPublicacion + "]";
     }
 
+    public void remove(Libros existing) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'remove'");
+    }
+
     
     
     

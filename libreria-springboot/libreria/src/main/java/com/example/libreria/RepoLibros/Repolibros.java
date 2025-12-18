@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.example.libreria.Model.Libros;
 
 @Repository
-public class Repolibros {
+public class Repolibros implements InterfazLibros{
 
     private final List<Libros> libros = new ArrayList<>();
 
@@ -22,11 +22,13 @@ public class Repolibros {
         libros.add(new Libros(5L, "F. Scott Fitzgerald", "El Gran Gatsby", LocalDate.of(1925, 4, 10)));
     }
 
+    @Override
     public List<Libros> findAll() {
         return libros;
     }
 
-    public Optional<Libros> BuscaId(long idLibro){
+
+    public Optional<Libros> findById(long idLibro){
         return libros.stream().filter(libros1 -> libros1.getIdLibro()==idLibro).findFirst();
     }
 
@@ -34,6 +36,17 @@ public class Repolibros {
         return libros.stream()
                 .filter(l -> l.getTitulo().equalsIgnoreCase(titulo))
                 .findFirst();
+    }
+
+    @Override
+    public void save(Libros libro) {
+        findById(libro.getIdLibro()).ifPresent(libro::remove);
+        libros.add(libro);
+    }
+
+    @Override
+    public void deleteById(long id) {
+        findById(id).ifPresent(libros::remove);
     }
 
 }
