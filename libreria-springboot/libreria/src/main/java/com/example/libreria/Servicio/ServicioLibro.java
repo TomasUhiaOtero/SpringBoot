@@ -11,6 +11,8 @@ import com.example.libreria.RepoLibros.Repolibros;
 @Service
 public class ServicioLibro implements InterfazServicioLibro {
 
+        //Esto es el servicio
+
         private final Repolibros repoLibros;
 
         public ServicioLibro(Repolibros repoLibros) {

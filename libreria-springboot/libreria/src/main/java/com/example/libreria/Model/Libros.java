@@ -3,6 +3,9 @@ package com.example.libreria.Model;
 import java.time.LocalDate;
 
 public class Libros implements Cloneable{
+
+    //Esto es el modelo
+
     private long idLibro;
     private String autor;
     private String titulo;

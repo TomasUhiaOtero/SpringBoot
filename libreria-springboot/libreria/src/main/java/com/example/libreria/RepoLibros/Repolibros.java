@@ -12,6 +12,8 @@ import com.example.libreria.Model.Libros;
 @Repository
 public class Repolibros implements InterfazLibros{
 
+    //Esto es el equivalente a la BBDD
+
     private final List<Libros> libros = new ArrayList<>();
 
     public Repolibros(){
