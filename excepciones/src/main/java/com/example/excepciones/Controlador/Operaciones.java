@@ -10,7 +10,7 @@ public class Operaciones {
 
     @GetMapping
     public String Divide() {
-        int valor = 20/0;
+        int valor = 20/4;
         return "Resultado: " + valor;
     }
 }
