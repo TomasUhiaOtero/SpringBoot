@@ -3,6 +3,7 @@ package com.example.libreria.Servicio;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.libreria.Model.Libros;
@@ -15,6 +16,7 @@ public class ServicioLibro implements InterfazServicioLibro {
 
         private final Repolibros repoLibros;
 
+        @Autowired
         public ServicioLibro(Repolibros repoLibros) {
                 this.repoLibros = repoLibros;
         }
